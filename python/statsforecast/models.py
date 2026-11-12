@@ -4780,11 +4780,9 @@ class WindowAverage(_TS):
     def predict_in_sample(self):
         r"""Access fitted WindowAverage insample predictions.
 
-        Args:
-            level (List[float]): Confidence levels (0-100) for prediction intervals.
-
-        Returns:
-            dict: Dictionary with entries `fitted` for point predictions and `level_*` for probabilistic predictions.
+        Raises:
+            NotImplementedError: `WindowAverage` does not provide insample
+                predictions.
         """
         raise NotImplementedError
 
@@ -4931,11 +4929,9 @@ class SeasonalWindowAverage(_TS):
     def predict_in_sample(self):
         r"""Access fitted SeasonalWindowAverage insample predictions.
 
-        Args:
-            level (Optional[List[int]]): Confidence levels (0-100) for prediction intervals.
-
-        Returns:
-            dict: Dictionary with entries `fitted` for point predictions and `level_*` for probabilistic predictions.
+        Raises:
+            NotImplementedError: `SeasonalWindowAverage` does not provide
+                insample predictions.
         """
         raise NotImplementedError
 
